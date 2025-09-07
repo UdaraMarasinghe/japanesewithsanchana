@@ -1,0 +1,489 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Japanese With Sanchana </title>
+        <link rel="icon" type="image/x-icon" href="titleIcon.png">
+    </head>
+    <style>
+        @font-face {
+            font-family: 'Metropolis';
+            src: url('Metropolis-Bold.otf');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Metropolis';
+            src: url('Metropolis-Medium.otf');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Metropolis';
+            src: url('Metropolis-MediumItalic.otf');
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0 10vh;
+            background: linear-gradient(to right, #1E1E1E, #472126);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .navBar {
+            display: flex;
+            align-items: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            padding-right: 14vh;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: linear-gradient(to right, #1E1E1E, #472126);
+        }
+
+        .links {
+            margin-left: auto;
+            display: flex;
+            gap: 9vh;
+        }
+
+        .links a {
+            font-family: 'Metropolis';
+            font-weight: 500;
+            font-style: normal;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #FF6C82;
+        }
+
+        .landingContainer {
+            width: 100%;
+            padding: 0 5vh;
+        }
+
+        .landingText {
+            padding: 14vh 0;
+            color: white;
+        }
+
+        .landingText p {
+            font-family: 'Metropolis';
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .landingText h1 {
+            margin-top: -4%;
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-style: normal;
+            font-size: 6rem;
+            color: #FF6C82;
+        }
+
+        .landingText h2 {
+            margin-top: -15%;
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-style: normal;
+            font-size: 3rem;
+            color: #FF6C82;
+        }
+
+        .japanText {
+            margin-top: -12%;
+            display: flex;
+            gap: 4vh;
+
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1.5rem;
+            color: #FF6C82;
+        }
+
+        .landingImg {
+            position: absolute;
+            right: 100;
+            margin-top: 2%;
+            border-radius: 100%;
+            width: 36%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .inlineContainer {
+            display: flex;
+        }
+
+        #exploreBtn {
+            background: linear-gradient(90deg, #ff7b92, #b00036);
+            background-size: 100% 100%;
+            background-position: left;
+            margin-top: 1%;
+            border: none;
+            width: 76px;
+            border-radius: 1vh;
+            padding: 10px 72px;
+            color: #fff;
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, background-position 0.5s ease, box-shadow 0.3s ease;
+        }
+
+        #exploreBtn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+            background-position: right;
+        }
+
+        .socials {
+            display: flex;;
+            gap: 3.6vh;
+            margin-top: -6%;
+            padding: 2vh 0;
+        }
+
+        .pageTwo h2 {
+            margin-top: 14%;
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-style: normal;
+            font-size: 3rem;
+            color: #FF6C82;
+        }
+
+        .imgContainer {
+            display: flex;
+            gap: 2vh;
+        }
+
+        .imgContainer img {
+            width: 22.5%;
+        }
+
+        .btn {
+            text-decoration: none;
+        }
+
+        .pageThree {
+            display: flex;
+            justify-content: center;
+            padding-right: 12vh;
+            padding-top: 30vh;
+        }
+
+        #pageTwo {
+            scroll-margin-top: 20vh;
+        }
+
+        #pageThree {
+            scroll-margin-top: -12vh;
+        }
+
+        .pagefour {
+            margin-bottom: 20vh;
+        }
+
+        .pagefour h2 {
+            margin-top: -2%;
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-style: normal;
+            font-size: 3rem;
+            color: #FF6C82;
+        }
+
+        .pagefour p {
+            margin-top: 20%;
+            font-family: 'Metropolis';
+            font-weight: 700;
+            font-style: normal;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+        
+        .contactImg {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 14vh;
+            margin: 0 auto;
+        }
+
+        .aboutImg {
+            width: 130%;
+        }
+
+        .imgContainer img {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .contactImg a img {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width:900px) {
+            
+            body {
+                padding: 0 2vh;
+            }
+
+            .navBar {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+                padding-right: 0vh;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+
+            .navBar img {
+                width: 60%;
+                margin-bottom: 2vh;
+            }
+
+            .links {
+                display: flex;
+                margin-left: 2vh;
+                gap: 4vh;
+            }
+
+            .links a {
+                white-space: nowrap;
+            }
+
+            .landingContainer {
+                padding: 2vh 0;
+            }
+
+            .landingText {
+                padding: 100% 0;
+            }
+
+            .landingText p {
+                font-size: 0.6rem;
+            }
+            
+            .landingText h1 {
+                margin-top: -4%;
+                font-size: 3rem;
+            }
+
+            .landingText h2 {
+                margin-top: -14%;
+                font-family: 'Metropolis';
+                font-weight: 700;
+                font-style: normal;
+                font-size: 2rem;
+                color: #FF6C82;
+            }
+
+            .japanText {
+                margin-top: -12%;
+                display: flex;
+                gap: 4vh;
+
+                font-family: 'Metropolis';
+                font-weight: 700;
+                font-style: normal;
+                font-size: 1.5rem;
+                color: #FF6C82;
+            }
+
+            .landingImg {
+                display: block;
+                margin: 20px auto;
+                width: 80%;
+                left: auto;
+                right: auto;
+            }
+
+            .inlineContainer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .japanText {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .socials {
+                justify-content: center;
+                gap: 1.4vh;
+                margin-top: -98%;
+                padding: 0 0;
+            }
+
+            #exploreBtn {
+                visibility: hidden;
+            }
+
+            .socials img {
+                width: 3vh;
+            }
+
+            .pageTwo h2 {
+                font-size: 2rem;
+            }
+
+            .imgContainer {
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+                gap: 2vh;
+            }
+
+            .imgContainer img {
+                width: 100%;
+            }
+
+            .pageThree {
+                padding-right: 0;
+                padding-top: 10vh;
+                justify-content: center;
+            }
+
+            .pageThree img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+            
+            .pagefour h2 {
+                margin-top: -4%;
+                font-size: 2rem;
+            }
+
+            .pagefour p {
+                font-size: 1rem;
+            }
+
+            .contactImg {
+                justify-content: start;
+                gap: 2vh;
+            }
+
+            .contactImg a img {
+                width: 120%;
+                max-width: 80px;
+            }
+
+            .pagefour {
+                margin-bottom: 4vh;
+            }
+        }
+    </style>
+    <body>
+        <div class="landingContainer">
+
+            <nav class="navBar">
+                <img src="logo.png" alt="">
+
+                <div class="links">
+                    <a href="">Home</a>
+                    <a href="#pageTwo">Learn</a>
+                    <a href="#pageThree">About</a>
+                    <a href="#pagefour">Contact Me</a>
+                </div>
+            </nav>
+
+            <div class="inlineContainer">
+                <div class="landingText">
+                    <p>“Learn from the best, Make your dream of Japan come true”</p>
+                    <h1>SANCHANA</h1>
+                    <h2>SENEWIRATHNA</h2>
+                    <div class="japanText">
+                        <p>サンチャナ &nbsp; セネヴィラトナ</p>
+                    </div>
+                </div>
+
+                <img class="landingImg" src="mainImg.png" alt="">
+            </div>
+
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=61572946675079">
+                    <img src="facebook01.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/stawberry_lusion/?fbclid=IwY2xjawMo9apleHRuA2FlbQIxMABicmlkETB6YU1Iem5BZk90Y2NIVHlLAR6nW-oagPgih43TqnRB5N77Vn5tdnEQXesUkmTnd4ZXu89BZNO_9ecpBuGIOQ_aem_mW2Z1eGWXTJ7K0jYwqxGCQ">
+                    <img src="insta01.png" alt="">
+                </a>
+                <a href="">
+                    <img src="whatsapp01.png" alt="">
+                </a>
+                <a href="https://www.tiktok.com/@sanchana_04">
+                    <img src="tiktok01.png" alt="">
+                </a>
+            </div>
+
+            <a class="btn" href="#pageTwo">
+                <div id="exploreBtn">Explore</div>
+            </a>
+
+            <div class="pageTwo">
+                <h2 id="pageTwo"> Learn <br> Kanji | Hiragana | Katakana</h2>
+
+                <div class="imgContainer">
+                    <img src="classImg01.png" alt="">
+                    <img src="classImg02.png" alt="">
+                    <img src="classImg03.png" alt="">
+                    <img src="classImg04.png" alt="">
+                </div>
+            </div>
+
+            <div id="pageThree" class="pageThree">
+                <img src="Photo.png" alt="">
+            </div>
+
+            <div id="pagefour" class="pagefour">
+                <p> Contact Me @ </p>
+                <h2> Sanchana Senewirathna </h2>
+
+                <div class="contactImg">
+                    <a href="https://www.facebook.com/profile.php?id=61572946675079">
+                        <img class="aboutImg" src="facebook02.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/stawberry_lusion/?fbclid=IwY2xjawMo9apleHRuA2FlbQIxMABicmlkETB6YU1Iem5BZk90Y2NIVHlLAR6nW-oagPgih43TqnRB5N77Vn5tdnEQXesUkmTnd4ZXu89BZNO_9ecpBuGIOQ_aem_mW2Z1eGWXTJ7K0jYwqxGCQ">
+                        <img class="aboutImg" src="insta02.png" alt="">
+                    </a>
+                    <a href="">
+                        <img class="aboutImg" src="whatsapp02.png" alt="">
+                    </a>
+                    <a href="https://www.tiktok.com/@sanchana_04">
+                        <img class="aboutImg" src="tiktok02.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
